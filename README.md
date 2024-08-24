@@ -35,6 +35,7 @@ Each pool contains many entities:
 - Current free chlorine (sensor: read only)
 - Target free chlorine (number: read/write)
 - Binary inputs (binary sensor: read only) (Depends on the model, mine has 4 which I don't use.)
+- UV light sensors (sensor: read only)
 
 
 ## What can I do with it?
