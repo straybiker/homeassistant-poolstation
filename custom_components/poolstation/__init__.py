@@ -117,7 +117,7 @@ class PoolstationDataUpdateCoordinator(DataUpdateCoordinator):
         except AuthenticationException as err:
             if self.auth_retries > 0:
                 self.auth_retries -= 1
-                _LOGGER.warning("Ignore authentication error", err)
+                _LOGGER.warning("Ignore authentication error. (auth_retries: %d). Error: %s", self.auth_retries, err)
             else:
                 _LOGGER.warning("Max retries reached for pool %s (auth_retries: %d), raising authentication error: %s", self.pool.alias, self.auth_retries, err)
                 raise ConfigEntryAuthFailed from err
